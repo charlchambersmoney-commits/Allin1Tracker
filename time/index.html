@@ -14,10 +14,8 @@
   <div class="card">
     <h2>Business days</h2>
     <div class="controls">
-      <label>Start date</label>
-      <input type="date" id="bd-start">
-      <label>End date</label>
-      <input type="date" id="bd-end">
+      <label>Start date</label><input type="date" id="bd-start">
+      <label>End date</label><input type="date" id="bd-end">
       <label>Holidays (comma-separated YYYY-MM-DD)</label>
       <input type="text" id="bd-holidays" placeholder="2025-12-25, 2025-12-26">
       <button id="bd-calc">Count</button>
@@ -41,8 +39,7 @@
   <div class="card">
     <h2>Countdown timer</h2>
     <div class="controls">
-      <label>Target date/time</label>
-      <input type="datetime-local" id="cd-target">
+      <label>Target date/time</label><input type="datetime-local" id="cd-target">
       <button id="cd-start">Start</button>
       <div class="small" id="cd-out"></div>
     </div>
@@ -50,4 +47,5 @@
 
   <div class="ad-slot">AD PLACEHOLDER</div>
 </section>
+<!-- add this line just before </body> -->
 <script type="module" src="/assets/tools/time.js"></script>
