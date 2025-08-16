@@ -1,37 +1,26 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AllIn1 Tracker · Health</title>
-  <meta name="description" content="Health tools: ovulation window and due-date estimates (educational only)." />
-  <link rel="canonical" href="https://allin1tracker.com/health/" />
-  <link rel="stylesheet" href="/assets/style.css" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1812822208168603" crossorigin="anonymous"></script>
-</head>
-<body>
-<header>
-  <div class="brand"><div class="logo"></div><div class="title">AllIn1 Tracker</div></div>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/time/">Time &amp; Date</a>
-    <a href="/finance/">Finance</a>
-    <a href="/health/">Health</a>
-    <a href="/productivity/">Productivity</a>
-  </nav>
-</header>
+<section class="grid" id="health-grid">
+  <div class="card">
+    <h2>Ovulation window (est.)</h2>
+    <p class="small">Educational estimate only, not medical advice.</p>
+    <div class="controls">
+      <label>First day of last period (LMP)</label><input type="date" id="ov-lmp">
+      <label>Cycle length (days)</label><input type="number" id="ov-cycle" value="28">
+      <button id="ov-calc">Estimate</button>
+      <div class="small" id="ov-out"></div>
+    </div>
+  </div>
 
-<section class="hero">
-  <h1>Health</h1>
-  <p class="kicker">Educational estimators only; not medical advice.</p>
-</section>
+  <div class="card">
+    <h2>Due date (est.)</h2>
+    <p class="small">Educational estimate only, not medical advice.</p>
+    <div class="controls">
+      <label>LMP (first day)</label><input type="date" id="edd-lmp">
+      <label>Cycle length (days)</label><input type="number" id="edd-cycle" value="28">
+      <button id="edd-calc">Estimate</button>
+      <div class="small" id="edd-out"></div>
+    </div>
+  </div>
 
-<section class="grid">
-  <div class="card"><h2>Ovulation Window</h2><p>Estimate fertile days. (Coming soon)</p></div>
-  <div class="card"><h2>Due-Date Estimator</h2><p>Calculate an estimated due date. (Coming soon)</p></div>
   <div class="ad-slot">AD PLACEHOLDER</div>
 </section>
-
-<footer>© 2025 AllIn1 Tracker · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></footer>
-</body>
-</html>
+<script type="module" src="/assets/tools/health.js"></script>
