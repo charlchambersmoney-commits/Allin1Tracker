@@ -1,38 +1,63 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AllIn1 Tracker · Productivity</title>
-  <meta name="description" content="Utilities: percentage calculator, unit converter, password generator." />
-  <link rel="canonical" href="https://allin1tracker.com/productivity/" />
-  <link rel="stylesheet" href="/assets/style.css" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1812822208168603" crossorigin="anonymous"></script>
-</head>
-<body>
-<header>
-  <div class="brand"><div class="logo"></div><div class="title">AllIn1 Tracker</div></div>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/time/">Time &amp; Date</a>
-    <a href="/finance/">Finance</a>
-    <a href="/health/">Health</a>
-    <a href="/productivity/">Productivity</a>
-  </nav>
-</header>
+<section class="grid" id="prod-grid">
+  <div class="card">
+    <h2>Percentage calculator</h2>
+    <div class="controls">
+      <label>X% of Y</label>
+      <input type="number" id="pct-x" placeholder="X">
+      <input type="number" id="pct-y" placeholder="Y">
+      <button id="pct-of">Compute</button>
+      <div class="small" id="pct-out1"></div>
+      <hr class="sep">
+      <label>X is what % of Y?</label>
+      <input type="number" id="pct-a" placeholder="X">
+      <input type="number" id="pct-b" placeholder="Y">
+      <button id="pct-what">Compute</button>
+      <div class="small" id="pct-out2"></div>
+      <hr class="sep">
+      <label>Increase/Decrease</label>
+      <input type="number" id="pct-base" placeholder="Base">
+      <input type="number" id="pct-change" placeholder="%">
+      <div class="list">
+        <button id="pct-inc">Increase</button>
+        <button id="pct-dec">Decrease</button>
+      </div>
+      <div class="small" id="pct-out3"></div>
+    </div>
+  </div>
 
-<section class="hero">
-  <h1>Productivity &amp; Utilities</h1>
-  <p class="kicker">Quick calculators and converters.</p>
-</section>
+  <div class="card">
+    <h2>Unit converter</h2>
+    <div class="controls">
+      <label>Type</label>
+      <select id="uc-type">
+        <option value="length">Length</option>
+        <option value="mass">Mass</option>
+        <option value="temp">Temperature</option>
+      </select>
+      <label>Value</label><input type="number" id="uc-val" value="1">
+      <label>From</label><select id="uc-from"></select>
+      <label>To</label><select id="uc-to"></select>
+      <button id="uc-go">Convert</button>
+      <div class="small" id="uc-out"></div>
+    </div>
+  </div>
 
-<section class="grid">
-  <div class="card"><h2>Percentage</h2><p>Find X% of Y, etc. (Coming soon)</p></div>
-  <div class="card"><h2>Unit Converter</h2><p>Common units (length, mass, temp). (Coming soon)</p></div>
-  <div class="card"><h2>Password Generator</h2><p>Strong random passwords. (Coming soon)</p></div>
+  <div class="card">
+    <h2>Password generator</h2>
+    <div class="controls">
+      <label>Length</label><input type="number" id="pw-len" value="16" min="6" max="64">
+      <div class="list">
+        <label><input type="checkbox" id="pw-l" checked> a-z</label>
+        <label><input type="checkbox" id="pw-u" checked> A-Z</label>
+        <label><input type="checkbox" id="pw-d" checked> 0-9</label>
+        <label><input type="checkbox" id="pw-s"> !@#$%</label>
+      </div>
+      <button id="pw-make">Generate</button>
+      <input type="text" id="pw-out" readonly>
+      <button class="copybtn" id="pw-copy">Copy</button>
+    </div>
+  </div>
+
   <div class="ad-slot">AD PLACEHOLDER</div>
 </section>
-
-<footer>© 2025 AllIn1 Tracker · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></footer>
-</body>
-</html>
+<script type="module" src="/assets/tools/productivity.js"></script>
