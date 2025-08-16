@@ -1,39 +1,53 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AllIn1 Tracker · Time & Date</title>
-  <meta name="description" content="Time & Date tools: age, business days, stopwatch, countdown timer." />
-  <link rel="canonical" href="https://allin1tracker.com/time/" />
-  <link rel="stylesheet" href="/assets/style.css" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1812822208168603" crossorigin="anonymous"></script>
-</head>
-<body>
-<header>
-  <div class="brand"><div class="logo"></div><div class="title">AllIn1 Tracker</div></div>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/time/">Time &amp; Date</a>
-    <a href="/finance/">Finance</a>
-    <a href="/health/">Health</a>
-    <a href="/productivity/">Productivity</a>
-  </nav>
-</header>
+<section class="grid" id="time-grid">
+  <div class="card">
+    <h2>Age calculator</h2>
+    <div class="controls">
+      <label>Birthdate</label>
+      <input type="date" id="age-dob">
+      <label>As of (optional)</label>
+      <input type="date" id="age-asof">
+      <button id="age-calc">Calculate</button>
+      <div class="small" id="age-out"></div>
+    </div>
+  </div>
 
-<section class="hero">
-  <h1>Time &amp; Date</h1>
-  <p class="kicker">Age calculator, business days, stopwatch, countdown timer.</p>
-</section>
+  <div class="card">
+    <h2>Business days</h2>
+    <div class="controls">
+      <label>Start date</label>
+      <input type="date" id="bd-start">
+      <label>End date</label>
+      <input type="date" id="bd-end">
+      <label>Holidays (comma-separated YYYY-MM-DD)</label>
+      <input type="text" id="bd-holidays" placeholder="2025-12-25, 2025-12-26">
+      <button id="bd-calc">Count</button>
+      <div class="small" id="bd-out"></div>
+    </div>
+  </div>
 
-<section class="grid">
-  <div class="card"><h2>Age Calculator</h2><p>Enter a birthdate to get exact age. (Coming soon)</p></div>
-  <div class="card"><h2>Business Days</h2><p>Count workdays between two dates. (Coming soon)</p></div>
-  <div class="card"><h2>Stopwatch</h2><p>Start/stop + lap times. (Coming soon)</p></div>
-  <div class="card"><h2>Countdown</h2><p>Timer to a date/time. (Coming soon)</p></div>
+  <div class="card">
+    <h2>Stopwatch</h2>
+    <div class="controls">
+      <div class="timer"><span id="sw-display">00:00.00</span></div>
+      <div class="list">
+        <button id="sw-start">Start</button>
+        <button id="sw-lap">Lap</button>
+        <button id="sw-reset">Reset</button>
+      </div>
+      <div class="laps" id="sw-laps"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Countdown timer</h2>
+    <div class="controls">
+      <label>Target date/time</label>
+      <input type="datetime-local" id="cd-target">
+      <button id="cd-start">Start</button>
+      <div class="small" id="cd-out"></div>
+    </div>
+  </div>
+
   <div class="ad-slot">AD PLACEHOLDER</div>
 </section>
-
-<footer>© 2025 AllIn1 Tracker · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></footer>
-</body>
-</html>
+<script type="module" src="/assets/tools/time.js"></script>
