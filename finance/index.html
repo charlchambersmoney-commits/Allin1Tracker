@@ -1,39 +1,52 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AllIn1 Tracker · Finance</title>
-  <meta name="description" content="Finance tools: loan EMI, compound savings, VAT, bill split." />
-  <link rel="canonical" href="https://allin1tracker.com/finance/" />
-  <link rel="stylesheet" href="/assets/style.css" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1812822208168603" crossorigin="anonymous"></script>
-</head>
-<body>
-<header>
-  <div class="brand"><div class="logo"></div><div class="title">AllIn1 Tracker</div></div>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/time/">Time &amp; Date</a>
-    <a href="/finance/">Finance</a>
-    <a href="/health/">Health</a>
-    <a href="/productivity/">Productivity</a>
-  </nav>
-</header>
+<section class="grid" id="fin-grid">
+  <div class="card">
+    <h2>Loan EMI</h2>
+    <div class="controls">
+      <label>Amount</label><input type="number" id="emi-amt" placeholder="100000">
+      <label>Annual rate (%)</label><input type="number" id="emi-rate" placeholder="12">
+      <label>Term (months)</label><input type="number" id="emi-months" placeholder="60">
+      <button id="emi-calc">Calculate</button>
+      <div class="small" id="emi-out"></div>
+    </div>
+  </div>
 
-<section class="hero">
-  <h1>Finance</h1>
-  <p class="kicker">Loan EMI, compound savings, VAT, bill splitting.</p>
-</section>
+  <div class="card">
+    <h2>Compound savings</h2>
+    <div class="controls">
+      <label>Initial amount</label><input type="number" id="sav-pv" placeholder="1000">
+      <label>Monthly deposit</label><input type="number" id="sav-pmt" placeholder="200">
+      <label>Annual rate (%)</label><input type="number" id="sav-rate" placeholder="6">
+      <label>Years</label><input type="number" id="sav-years" placeholder="10">
+      <button id="sav-calc">Calculate</button>
+      <div class="small" id="sav-out"></div>
+    </div>
+  </div>
 
-<section class="grid">
-  <div class="card"><h2>Loan EMI</h2><p>Monthly repayment calculator. (Coming soon)</p></div>
-  <div class="card"><h2>Compound Savings</h2><p>Growth over time. (Coming soon)</p></div>
-  <div class="card"><h2>VAT</h2><p>Add/remove VAT from an amount. (Coming soon)</p></div>
-  <div class="card"><h2>Bill Split</h2><p>Split with tips and taxes. (Coming soon)</p></div>
+  <div class="card">
+    <h2>VAT calculator</h2>
+    <div class="controls">
+      <label>Amount</label><input type="number" id="vat-amt" placeholder="100">
+      <label>VAT rate (%)</label><input type="number" id="vat-rate" value="15">
+      <div class="list">
+        <button id="vat-add">Add VAT</button>
+        <button id="vat-rem">Remove VAT</button>
+      </div>
+      <div class="small" id="vat-out"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Bill split</h2>
+    <div class="controls">
+      <label>Subtotal</label><input type="number" id="bs-sub" placeholder="500">
+      <label>Tip %</label><input type="number" id="bs-tip" value="10">
+      <label>Tax %</label><input type="number" id="bs-tax" value="0">
+      <label>People</label><input type="number" id="bs-people" value="2">
+      <button id="bs-calc">Split</button>
+      <div class="small" id="bs-out"></div>
+    </div>
+  </div>
+
   <div class="ad-slot">AD PLACEHOLDER</div>
 </section>
-
-<footer>© 2025 AllIn1 Tracker · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></footer>
-</body>
-</html>
+<script type="module" src="/assets/tools/finance.js"></script>
