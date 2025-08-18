@@ -1,52 +1,92 @@
-<section class="grid" id="fin-grid">
-  <div class="card">
-    <h2>Loan EMI</h2>
-    <div class="controls">
-      <label>Amount</label><input type="number" id="emi-amt" placeholder="100000">
-      <label>Annual rate (%)</label><input type="number" id="emi-rate" placeholder="12">
-      <label>Term (months)</label><input type="number" id="emi-months" placeholder="60">
-      <button id="emi-calc">Calculate</button>
-      <div class="small" id="emi-out"></div>
-    </div>
-  </div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AllIn1 Tracker — Finance</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/style.css" as="style">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1812822208168603" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="/"><span class="logo"></span><strong class="title">AllIn1 Tracker</strong></a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/time/">Time & Date</a>
+    <a class="active" href="/finance/">Finance</a>
+    <a href="/health/">Health</a>
+    <a href="/productivity/">Productivity</a>
+  </nav>
+</header>
 
-  <div class="card">
-    <h2>Compound savings</h2>
-    <div class="controls">
-      <label>Initial amount</label><input type="number" id="sav-pv" placeholder="1000">
-      <label>Monthly deposit</label><input type="number" id="sav-pmt" placeholder="200">
-      <label>Annual rate (%)</label><input type="number" id="sav-rate" placeholder="6">
-      <label>Years</label><input type="number" id="sav-years" placeholder="10">
-      <button id="sav-calc">Calculate</button>
-      <div class="small" id="sav-out"></div>
-    </div>
-  </div>
+<main class="container">
+  <h1>Finance</h1>
 
-  <div class="card">
-    <h2>VAT calculator</h2>
-    <div class="controls">
-      <label>Amount</label><input type="number" id="vat-amt" placeholder="100">
-      <label>VAT rate (%)</label><input type="number" id="vat-rate" value="15">
-      <div class="list">
-        <button id="vat-add">Add VAT</button>
-        <button id="vat-rem">Remove VAT</button>
+  <section class="grid" id="fin-grid">
+    <div class="card">
+      <h2>Loan EMI</h2>
+      <div class="controls">
+        <label>Amount</label><input type="number" id="emi-amt" placeholder="100000">
+        <label>Annual rate (%)</label><input type="number" id="emi-rate" placeholder="12">
+        <label>Term (months)</label><input type="number" id="emi-months" placeholder="60">
+        <button id="emi-calc">Calculate</button>
+        <div class="small" id="emi-out"></div>
       </div>
-      <div class="small" id="vat-out"></div>
+    </div>
+
+    <div class="card">
+      <h2>Compound savings</h2>
+      <div class="controls">
+        <label>Initial amount</label><input type="number" id="sav-pv" placeholder="1000">
+        <label>Monthly deposit</label><input type="number" id="sav-pmt" placeholder="200">
+        <label>Annual rate (%)</label><input type="number" id="sav-rate" placeholder="6">
+        <label>Years</label><input type="number" id="sav-years" placeholder="10">
+        <button id="sav-calc">Calculate</button>
+        <div class="small" id="sav-out"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>VAT calculator</h2>
+      <div class="controls">
+        <label>Amount</label><input type="number" id="vat-amt" placeholder="100">
+        <label>VAT rate (%)</label><input type="number" id="vat-rate" value="15">
+        <div class="list">
+          <button id="vat-add">Add VAT</button>
+          <button id="vat-rem">Remove VAT</button>
+        </div>
+        <div class="small" id="vat-out"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Bill split</h2>
+      <div class="controls">
+        <label>Subtotal</label><input type="number" id="bs-sub" placeholder="500">
+        <label>Tip %</label><input type="number" id="bs-tip" value="10">
+        <label>Tax %</label><input type="number" id="bs-tax" value="0">
+        <label>People</label><input type="number" id="bs-people" value="2">
+        <button id="bs-calc">Split</button>
+        <div class="small" id="bs-out"></div>
+      </div>
+    </div>
+
+    <div class="ad-slot">AD PLACEHOLDER</div>
+  </section>
+</main>
+
+<footer>
+  <div class="brand">
+    <a class="logo" href="/"></a>
+    <div>
+      <div>© 2025 AllIn1 Tracker</div>
+      <div class="small"><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></div>
     </div>
   </div>
+</footer>
 
-  <div class="card">
-    <h2>Bill split</h2>
-    <div class="controls">
-      <label>Subtotal</label><input type="number" id="bs-sub" placeholder="500">
-      <label>Tip %</label><input type="number" id="bs-tip" value="10">
-      <label>Tax %</label><input type="number" id="bs-tax" value="0">
-      <label>People</label><input type="number" id="bs-people" value="2">
-      <button id="bs-calc">Split</button>
-      <div class="small" id="bs-out"></div>
-    </div>
-  </div>
-
-  <div class="ad-slot">AD PLACEHOLDER</div>
-</section>
 <script type="module" src="/assets/tools/finance.js"></script>
+</body>
+</html>
