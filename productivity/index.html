@@ -7,7 +7,7 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="preload" href="/assets/style.css" as="style">
   <link rel="stylesheet" href="/assets/style.css">
-  <!-- Google AdSense Auto ads (optional, safe to leave even if not enabled yet) -->
+  <!-- Google AdSense Auto ads -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1812822208168603" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -25,21 +25,33 @@
 <main class="container">
   <h1>Productivity & Utilities</h1>
 
-  <!-- ===== your Productivity tools (unchanged) ===== -->
   <section class="grid" id="prod-grid">
     <div class="card">
       <h2>Percentage calculator</h2>
       <div class="controls">
-        <label>X% of Y</label><input type="number" id="pct-x" placeholder="X"><input type="number" id="pct-y" placeholder="Y">
+        <label>X% of Y</label>
+        <input type="number" id="pct-x" placeholder="X">
+        <input type="number" id="pct-y" placeholder="Y">
         <button id="pct-of">Compute</button>
         <div class="small" id="pct-out1"></div>
+
         <hr class="sep">
-        <label>X is what % of Y?</label><input type="number" id="pct-a" placeholder="X"><input type="number" id="pct-b" placeholder="Y">
+
+        <label>X is what % of Y?</label>
+        <input type="number" id="pct-a" placeholder="X">
+        <input type="number" id="pct-b" placeholder="Y">
         <button id="pct-what">Compute</button>
         <div class="small" id="pct-out2"></div>
+
         <hr class="sep">
-        <label>Increase/Decrease</label><input type="number" id="pct-base" placeholder="Base"><input type="number" id="pct-change" placeholder="%">
-        <div class="list"><button id="pct-inc">Increase</button><button id="pct-dec">Decrease</button></div>
+
+        <label>Increase/Decrease</label>
+        <input type="number" id="pct-base" placeholder="Base">
+        <input type="number" id="pct-change" placeholder="%">
+        <div class="list">
+          <button id="pct-inc">Increase</button>
+          <button id="pct-dec">Decrease</button>
+        </div>
         <div class="small" id="pct-out3"></div>
       </div>
     </div>
@@ -47,7 +59,12 @@
     <div class="card">
       <h2>Unit converter</h2>
       <div class="controls">
-        <label>Type</label><select id="uc-type"><option value="length">Length</option><option value="mass">Mass</option><option value="temp">Temperature</option></select>
+        <label>Type</label>
+        <select id="uc-type">
+          <option value="length">Length</option>
+          <option value="mass">Mass</option>
+          <option value="temp">Temperature</option>
+        </select>
         <label>Value</label><input type="number" id="uc-val" value="1">
         <label>From</label><select id="uc-from"></select>
         <label>To</label><select id="uc-to"></select>
@@ -72,7 +89,7 @@
       </div>
     </div>
 
-    <!-- Optional manual ad unit slot goes here; leave as-is until you create a slot ID in AdSense -->
+    <!-- Optional manual ad unit slot -->
     <div class="ad-slot">AD PLACEHOLDER</div>
   </section>
 </main>
