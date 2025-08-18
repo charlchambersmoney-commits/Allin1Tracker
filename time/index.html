@@ -1,51 +1,90 @@
-<section class="grid" id="time-grid">
-  <div class="card">
-    <h2>Age calculator</h2>
-    <div class="controls">
-      <label>Birthdate</label>
-      <input type="date" id="age-dob">
-      <label>As of (optional)</label>
-      <input type="date" id="age-asof">
-      <button id="age-calc">Calculate</button>
-      <div class="small" id="age-out"></div>
-    </div>
-  </div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AllIn1 Tracker — Time & Date</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/assets/style.css" as="style">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1812822208168603" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+  <a class="brand" href="/"><span class="logo"></span><strong class="title">AllIn1 Tracker</strong></a>
+  <nav>
+    <a href="/">Home</a>
+    <a class="active" href="/time/">Time & Date</a>
+    <a href="/finance/">Finance</a>
+    <a href="/health/">Health</a>
+    <a href="/productivity/">Productivity</a>
+  </nav>
+</header>
 
-  <div class="card">
-    <h2>Business days</h2>
-    <div class="controls">
-      <label>Start date</label><input type="date" id="bd-start">
-      <label>End date</label><input type="date" id="bd-end">
-      <label>Holidays (comma-separated YYYY-MM-DD)</label>
-      <input type="text" id="bd-holidays" placeholder="2025-12-25, 2025-12-26">
-      <button id="bd-calc">Count</button>
-      <div class="small" id="bd-out"></div>
-    </div>
-  </div>
+<main class="container">
+  <h1>Time & Date</h1>
 
-  <div class="card">
-    <h2>Stopwatch</h2>
-    <div class="controls">
-      <div class="timer"><span id="sw-display">00:00.00</span></div>
-      <div class="list">
-        <button id="sw-start">Start</button>
-        <button id="sw-lap">Lap</button>
-        <button id="sw-reset">Reset</button>
+  <section class="grid" id="time-grid">
+    <div class="card">
+      <h2>Age calculator</h2>
+      <div class="controls">
+        <label>Birthdate</label>
+        <input type="date" id="age-dob">
+        <label>As of (optional)</label>
+        <input type="date" id="age-asof">
+        <button id="age-calc">Calculate</button>
+        <div class="small" id="age-out"></div>
       </div>
-      <div class="laps" id="sw-laps"></div>
+    </div>
+
+    <div class="card">
+      <h2>Business days</h2>
+      <div class="controls">
+        <label>Start date</label><input type="date" id="bd-start">
+        <label>End date</label><input type="date" id="bd-end">
+        <label>Holidays (comma-separated YYYY-MM-DD)</label>
+        <input type="text" id="bd-holidays" placeholder="2025-12-25, 2025-12-26">
+        <button id="bd-calc">Count</button>
+        <div class="small" id="bd-out"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Stopwatch</h2>
+      <div class="controls">
+        <div class="timer"><span id="sw-display">00:00.00</span></div>
+        <div class="list">
+          <button id="sw-start">Start</button>
+          <button id="sw-lap">Lap</button>
+          <button id="sw-reset">Reset</button>
+        </div>
+        <div class="laps" id="sw-laps"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Countdown timer</h2>
+      <div class="controls">
+        <label>Target date/time</label><input type="datetime-local" id="cd-target">
+        <button id="cd-start">Start</button>
+        <div class="small" id="cd-out"></div>
+      </div>
+    </div>
+
+    <div class="ad-slot">AD PLACEHOLDER</div>
+  </section>
+</main>
+
+<footer>
+  <div class="brand">
+    <a class="logo" href="/"></a>
+    <div>
+      <div>© 2025 AllIn1 Tracker</div>
+      <div class="small"><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></div>
     </div>
   </div>
+</footer>
 
-  <div class="card">
-    <h2>Countdown timer</h2>
-    <div class="controls">
-      <label>Target date/time</label><input type="datetime-local" id="cd-target">
-      <button id="cd-start">Start</button>
-      <div class="small" id="cd-out"></div>
-    </div>
-  </div>
-
-  <div class="ad-slot">AD PLACEHOLDER</div>
-</section>
-<!-- add this line just before </body> -->
 <script type="module" src="/assets/tools/time.js"></script>
+</body>
+</html>
